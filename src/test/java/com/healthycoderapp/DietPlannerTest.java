@@ -1,9 +1,6 @@
 package com.healthycoderapp;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +15,7 @@ public class DietPlannerTest {
     }
 
 
-    @Test
+    @RepeatedTest(value=10)
     void should_returnCorrectDietPlan_when_correctCoder(){
 
         Coder coder = new Coder(1.82,75.0,26,Gender.MALE);
